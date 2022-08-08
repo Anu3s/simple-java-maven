@@ -1,7 +1,7 @@
 job("scriptjob") {
    description("lets solve this")
    scm {
-       git("git@github.com:Anu3s/simple-java-maven", master)
+       git("git@github.com:Anu3s/simple-java-maven", "master")
    }
    triggers {
        scm('* * * * *')
@@ -9,7 +9,7 @@ job("scriptjob") {
    steps {
        maven('clean package', 'simple-java-maven/pom.xml')
 
-   }i
+   }
    publishers {
        archieveArtifacts '**/*.jar'
 
