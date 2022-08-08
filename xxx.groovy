@@ -1,4 +1,4 @@
-job('seed_job') {
+job('seed_joblocal') {
     description("lets try groovy for first time on $DATE")
     scm {
          git("https://github.com/Anu3s/simple-java-maven.git,master)
