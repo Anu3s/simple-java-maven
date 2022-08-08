@@ -4,7 +4,7 @@ job("scriptjob") {
        git("git@github.com:Anu3s/simple-java-maven", master)
    }
    triggers {
-       scm(* * * * *)
+       scm('* * * * *')
    }
    steps {
        maven('clean package', 'simple-java-maven/pom.xml')
