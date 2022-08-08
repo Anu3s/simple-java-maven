@@ -1,13 +1,13 @@
 job('seed_joblocal') {
     description("lets try groovy for first time")
     scm {
-         git("https://github.com/Anu3s/simple-java-maven.git",master)
+         git("git@github.com:Anu3s/simple-java-maven.git",master)
     } 
     triggers {
           scm('* * * * *')
     }
     steps {
-        maven('clean package' ,'https://github.com/Anu3s/simple-java-maven/blob/master/pom.xml')
+        maven('clean package' ,'simple-java-maven/pom.xml')
     }
     publishers {
         archieveArtifacts '**/*.jar'
