@@ -9,8 +9,9 @@ job("scriptjob") {
    steps {
        maven('clean package', 'simple-java-maven/pom.xml')
 
-   }
+   }i
    publishers {
        archieveArtifacts '**/*.jar'
 
    }
+}   
